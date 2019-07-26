@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chat app</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <style>
+        
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+     #chat{
+        
+         display:flex;
+        
+         
+     }
+     input{
+         width:300px;
+         outline:none;
+         border:1px solid black;
+         border-radius:4px;
+         color:black;
+         height:30px;
+         box-shadow:2px 2px 10px black;
+     }
+     button{
+         background-color: blue;
+         height:30px;
+         width:40px;
+         outline:none;
+         border:none;
+         cursor:pointer;
+         border-radius: 5px;
+         box-shadow:2px 2px 10px black;
+     }
+     
+     .container{
+       
+        position: absolute;
+         bottom:0px;
+         left:50%;
+         transform:translate(-50%,-50%);
+        
+
+        
+     }
+     @media only screen and (max-width:600px){
+         input{
+             width:250px;
+
+         }
+         button{
+             width:35px;
+         }
+     }
+    .welcome-join {
+         text-align:center;}
+     .user-message{
+         font-style:sans-serif;
+        
+         float:right;
+         clear:left;
+         clear:right;
+       margin-right:0px;
+        min-width:40px;
+        max-width:200px;
+        background-color: blue;
+        border-radius:5px;
+        
+        font-size:1rem;
+        padding: 2px;
+        color:white;
+        margin-top:4px;
+    } 
+    .message{
+        
+        /* 
+        position:absolute;
+        left:4px; */
+        clear:right;
+        float:left;
+        margin-top:4px;
+        clear:left;
+        min-width:50px;
+        max-width:200px;
+        background-color: grey;
+        border-radius:5px;
+        text-align:center;
+        font-size:1rem;
+        padding:2px;
+        color:white;
+        font-style:sans-serif;
+    }
+    .box{
+        position: relative;
+        height:100vh;
+        
+    }
+    
+    </style>
+</head>
+<body>
+
+  <div class="box">
+        <div   id="chatbox"></div>
+     
+
+
+            <div class="container">
+     
+                    <form  id="chat">
+                        <input type="text" id ="message-box" placeholder="enter your message" autocomplete="off" >
+                        <button type="submit" id="btn">send</button>
+                 
+                    </form>
+                 </div>
+                 
+  </div>
+   
+   <script src="chat.js"></script>
+</body>
+</html>
